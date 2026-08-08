@@ -1,5 +1,7 @@
 # 2026 年电子设计竞赛 · K230 常用视觉模块
 
+[![CI](https://github.com/Molforte/k230-vision-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/Molforte/k230-vision-platform/actions/workflows/ci.yml)
+
 本项目收录了一些我在电赛筹备期间写完的一些基础的视觉模块，所有的项目文件均有做过优化与调试，搭载型号主要为YahBoom的 K230，其他平台/型号未知。
 
 ---
