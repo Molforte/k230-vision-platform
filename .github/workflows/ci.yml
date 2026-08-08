@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  # ── K230 Python 语法检查 ──
+  python-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Check Python syntax
+        run: |
+          find new_vision -name "*.py" -print0 | xargs -0 python -m py_compile
+
+  # ── STM32 编译检查 ──
+  stm32-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ARM GCC
+        uses: carlosperate/arm-none-eabi-gcc-action@v1
+        with:
+          release: "13.2.Rel1"
+      - name: Configure CMake
+        run: |
+          cmake -B build -S stm32f103c8t6_uart \
+            -DCMAKE_TOOLCHAIN_FILE=stm32f103c8t6_uart/cmake/gcc-arm-none-eabi.cmake \
+            -DCMAKE_BUILD_TYPE=MinSizeRel
+      - name: Build
+        run: cmake --build build

@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# STM32 build output
+stm32f103c8t6_uart/build/
+*.elf
+*.bin
+*.hex
+*.map
+
+# CubeIDE
+stm32f103c8t6_uart/.settings/bundles-lock.store.json
+stm32f103c8t6_uart/.settings/bundles.store.json
+stm32f103c8t6_uart/.settings/ide.store.json

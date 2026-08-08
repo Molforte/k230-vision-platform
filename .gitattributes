@@ -1,0 +1,14 @@
+# ── STM32 HAL 库 — 第三方代码，不计入语言统计 ──
+stm32f103c8t6_uart/Drivers/** linguist-vendored
+
+# ── STM32 CubeMX 自动生成 — 标记为生成代码 ──
+stm32f103c8t6_uart/startup_stm32f103xb.s linguist-generated
+stm32f103c8t6_uart/STM32F103XX_FLASH.ld linguist-generated
+stm32f103c8t6_uart/Core/Src/system_stm32f1xx.c linguist-generated
+stm32f103c8t6_uart/Core/Src/syscalls.c linguist-generated
+stm32f103c8t6_uart/Core/Src/sysmem.c linguist-generated
+stm32f103c8t6_uart/Core/Inc/stm32f1xx_hal_conf.h linguist-generated
+stm32f103c8t6_uart/.mxproject linguist-generated
+stm32f103c8t6_uart/.settings/** linguist-generated
+stm32f103c8t6_uart/cmake/** linguist-generated
+stm32f103c8t6_uart/.clangd linguist-generated
